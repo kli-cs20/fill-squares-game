@@ -22,3 +22,12 @@ grid[endGoal.row][endGoal.col] = 3;
 // Create divs to model the grid array
 createDivGrid(grid);
 
+function createGridArray() {
+    // Create and return a grid array
+    return [ [0, 0, 0, 1, 0, 1], 
+             [0, 0, 0, 0, 0, 0], 
+             [0, 0, 0, 0, 0, 0], 
+             [0, 0, 0, 1, 0, 0], 
+             [1, 0, 0, 0, 0, 0], 
+             [1, 0, 0, 0, 0, 0] ];
+}

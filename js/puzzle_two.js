@@ -1,7 +1,7 @@
 // Puzzle Two
 
 // Create array to represent a grid
-let grid = createPuzzle2Array();
+let grid = createGridArray();
 
 // Add player to the grid array
 let player = {
@@ -22,3 +22,11 @@ grid[endGoal.row][endGoal.col] = 3;
 // Create divs to model the grid array
 createDivGrid(grid);
 
+function createGridArray() {
+    return [ [0, 0, 0, 0, 0, 0], 
+             [0, 0, 0, 0, 0, 0], 
+             [0, 0, 1, 0, 0, 0], 
+             [0, 1, 0, 0, 1, 0], 
+             [1, 0, 0, 0, 0, 0], 
+             [1, 0, 0, 0, 0, 0] ];
+}

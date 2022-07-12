@@ -6,34 +6,6 @@ const NUM_COLS = 6;
 const resultOne = document.getElementById("result");
 const resetBtn = document.getElementById("reset");
 
-function createGridArray() {
-    // Create and return a grid array
-    return [ [0, 0, 0, 1, 0, 1], 
-             [0, 0, 0, 0, 0, 0], 
-             [0, 0, 0, 0, 0, 0], 
-             [0, 0, 0, 1, 0, 0], 
-             [1, 0, 0, 0, 0, 0], 
-             [1, 0, 0, 0, 0, 0] ];
-}
-
-function createPuzzle2Array() {
-    return [ [0, 0, 0, 0, 0, 0], 
-             [0, 0, 0, 0, 0, 0], 
-             [0, 0, 1, 0, 0, 0], 
-             [0, 1, 0, 0, 1, 0], 
-             [1, 0, 0, 0, 0, 0], 
-             [1, 0, 0, 0, 0, 0] ];
-}
-
-function createPuzzle3Array() {
-    return [ [0, 0, 0, 0, 0, 1], 
-             [0, 0, 1, 0, 0, 1], 
-             [0, 0, 0, 0, 0, 0], 
-             [0, 0, 0, 0, 0, 1], 
-             [0, 0, 1, 0, 0, 0], 
-             [0, 0, 0, 0, 0, 0] ];
-}
-
 function createDivGrid(grid) {
     for (let row = 0; row < NUM_ROWS; row++) {
         for (let col = 0; col < NUM_COLS; col++) {
