@@ -4,9 +4,11 @@
 const NUM_ROWS = 6;
 const NUM_COLS = 6;
 const resultOne = document.getElementById("result");
+const btnOne = document.getElementById("resetOne");
 
 // Create array to represent a grid
 let grid = createGridArray();
+let grid2 = createPuzzle2Array();
 
 // Add player to the grid array
 let player = {
@@ -27,8 +29,9 @@ grid[endGoal.row][endGoal.col] = 3;
 // Create divs to model the grid array
 createDivGrid(grid);
 
-// Key Event Listeners - player movement
+// Key Event Listeners - player movement + reset puzzle
 document.addEventListener("keydown", movePlayer);
+btnOne.addEventListener("click", resetPuzzle);
 
 function movePlayer(e) {
     if (e.keyCode === 39) { // Right arrow key
@@ -51,7 +54,9 @@ function movePlayer(e) {
 
     // Check if puzzle is completed
     if (grid[endGoal.row][endGoal.col] === 2) {
-        resultOne.innerHTML = "Congratulations, you completed Puzzle 1!"
+        if (checkIfComplete()) {
+            resultOne.innerHTML = "Congratulations, you completed Puzzle 1!"
+        }
     }
 
 }
