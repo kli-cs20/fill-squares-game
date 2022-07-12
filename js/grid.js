@@ -3,7 +3,7 @@
 // Global Constants
 const NUM_ROWS = 6;
 const NUM_COLS = 6;
-const resultOne = document.getElementById("result");
+const resultEl = document.getElementById("result");
 const resetBtn = document.getElementById("reset");
 
 function createDivGrid(grid) {
@@ -74,7 +74,7 @@ function movePlayer(e) {
     // Check if puzzle is completed
     if (grid[endGoal.row][endGoal.col] === 2) {
         if (checkIfComplete()) {
-            resultOne.innerHTML = "Congratulations, you completed the puzzlle!"
+            resultEl.innerHTML = "Congratulations, you completed the puzzle!"
         }
     }
 
