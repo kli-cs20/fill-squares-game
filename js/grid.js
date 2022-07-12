@@ -101,10 +101,10 @@ function updatePlayer(newRow, newCol) {
 function checkIfComplete() {
     for (let row = 0; row < 6; row++) {
         for (let col = 0; col < 6; col++) {
-            if (grid[row][col] !== 0) {
-                return true
+            if (grid[row][col] === 0) {
+                return false
             }
-            return false
         }
     }
+    return true
 }
