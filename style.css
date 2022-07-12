@@ -1,5 +1,5 @@
 #container {
-    width: 500px;
+    width: 300px;
 }
 
 #container div {
@@ -15,4 +15,8 @@
 
 .player {
     background-color: red;
+}
+
+.goal {
+    background-color: greenyellow;
 }

@@ -1,19 +1,27 @@
 // GRID DESIGNER
 
 // Global Constants
-const NUM_ROWS = 10;
-const NUM_COLS = 10;
+const NUM_ROWS = 6;
+const NUM_COLS = 6;
 
 // Create array to represent a grid
 let grid = createGridArray();
 
 // Add player to the grid array
 let player = {
-    row: 0,
-    col: 0
+    row: 5,
+    col: 3
 }
 
 grid[player.row][player.col] = 2;
+
+// Add end goal to the grid array
+let endGoal = {
+    row: 0,
+    col: 4
+}
+
+grid[endGoal.row][endGoal.col] = 3;
 
 // Create divs to model the grid array
 createDivGrid(grid);
@@ -34,19 +42,12 @@ function movePlayer(e) {
 }
 
 function updatePlayer(newRow, newCol) {
-    // Remove player class from current location
-    let cellId = "cell" + player.row + "-" + player.col;
-    document.getElementById(cellId).classList.remove("player");
-
-    // Set grid array to 0 for current location
-    grid[player.row][player.col] = 0;
-
     // Update player location
     player.row = newRow;
     player.col = newCol;
 
     // Update class and grid
-    cellId = "cell" + player.row + "-" + player.col;
+    let cellId = "cell" + player.row + "-" + player.col;
     document.getElementById(cellId).classList.add("player");
 
     grid[player.row][player.col] = 2;
