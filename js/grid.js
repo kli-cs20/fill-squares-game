@@ -93,7 +93,7 @@ function movePlayer(e) {
     // Check if puzzle is completed
     if (grid[endGoal.row][endGoal.col] === 2) {
         if (checkIfComplete()) {
-            resultOne.innerHTML = "Congratulations, you completed Puzzle 1!"
+            resultOne.innerHTML = "Congratulations, you completed the puzzlle!"
         }
     }
 

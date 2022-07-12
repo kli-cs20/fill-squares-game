@@ -13,8 +13,8 @@ grid[player.row][player.col] = 2;
 
 // Add end goal to the grid array
 let endGoal = {
-    row: 0,
-    col: 3
+    row: 3,
+    col: 0
 }
 
 grid[endGoal.row][endGoal.col] = 3;
