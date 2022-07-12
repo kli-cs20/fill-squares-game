@@ -1,19 +1,19 @@
-// Puzzle Three
+// Puzzle Four
 
 // Create array to represent a grid
 let grid = createGridArray();
 
 // Add player to the grid array
 let player = {
-    row: 5,
-    col: 0
+    row: 3,
+    col: 4
 }
 
 grid[player.row][player.col] = 2;
 
 // Add end goal to the grid array
 let endGoal = {
-    row: 2,
+    row: 0,
     col: 5
 }
 
@@ -23,10 +23,10 @@ grid[endGoal.row][endGoal.col] = 3;
 createDivGrid(grid);
 
 function createGridArray() {
-    return [ [0, 0, 0, 0, 0, 1], 
+    return [ [1, 0, 0, 0, 1, 0], 
+             [1, 0, 0, 0, 0, 0], 
+             [0, 0, 0, 0, 0, 0], 
              [0, 0, 1, 0, 0, 1], 
              [0, 0, 0, 0, 0, 0], 
-             [0, 0, 0, 0, 0, 1], 
-             [0, 0, 1, 0, 0, 0], 
              [0, 0, 0, 0, 0, 0] ];
 }
